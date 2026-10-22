@@ -1,0 +1,5 @@
+import java.awt.*;
+/** Lightweight canvas button, avoiding default Swing button styling. */
+public class UiButton { private final String label; private final Rectangle bounds; private final Color color; private boolean hover;
+    public UiButton(String label,int x,int y,int w,int h,Color color){this.label=label;bounds=new Rectangle(x,y,w,h);this.color=color;} public boolean contains(int x,int y){return bounds.contains(x,y);} public void setHover(boolean hover){this.hover=hover;}
+    public void draw(Graphics2D g){int lift=hover?-2:0;g.setColor(new Color(13,38,56,70));g.fillRoundRect(bounds.x+3,bounds.y+6+lift,bounds.width,bounds.height,18,18);g.setColor(hover?color.brighter():color);g.fillRoundRect(bounds.x,bounds.y+lift,bounds.width,bounds.height,18,18);g.setColor(new Color(255,255,255,80));g.drawRoundRect(bounds.x,bounds.y+lift,bounds.width,bounds.height,18,18);g.setColor(Color.WHITE);g.setFont(new Font("SansSerif",Font.BOLD,16));FontMetrics fm=g.getFontMetrics();g.drawString(label,bounds.x+(bounds.width-fm.stringWidth(label))/2,bounds.y+lift+(bounds.height-fm.getHeight())/2+fm.getAscent());}}

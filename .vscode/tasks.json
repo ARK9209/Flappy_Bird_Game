@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Flappy Bird",
+      "type": "shell",
+      "command": "javac",
+      "args": [
+        "-cp",
+        "lib\\mysql-connector-j-9.4.0.jar",
+        "-d",
+        "out",
+        "src\\*.java"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$javac"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "java.project.sourcePaths": ["src"],
+  "java.project.outputPath": "out",
+  "java.project.referencedLibraries": [
+    "lib/mysql-connector-j-9.4.0.jar"
+  ],
+  "java.project.excludedFolders": [
+    "**/bin"
+  ],
+  "files.watcherExclude": {
+    "**/bin/**": true,
+    "**/out/**": true
+  },
+  "search.exclude": {
+    "**/bin": true,
+    "**/out": true
+  }
+}
